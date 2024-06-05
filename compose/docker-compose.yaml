@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  example:
+    build:
+      context: .
+      dockerfile: dockerfile.file
+    environment:
+      - ECHO_MESSAGE=Hello World from docker compose!
+    ports:
+      - target: 8080
+        published: 8080
